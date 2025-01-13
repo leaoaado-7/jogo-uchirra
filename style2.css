@@ -58,8 +58,8 @@ nav ul li a:hover {
 
 #video-container {
     position: absolute;
-    top: 120px; /* Altura do header */
-    left: 0;
+    top: 150px; /* Altura do header */
+    left: px;
     width: 100%;
     height: 300px;
     
@@ -76,6 +76,17 @@ nav ul li a:hover {
 }
 
 
+#video-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 36px;
+    color: white;
+    z-index: 2;
+}
+
+
+
 
 main {
     padding-top: 140px; /* Para evitar que o conteúdo fique escondido pelo header fixo */
@@ -84,27 +95,167 @@ main {
 }
 
 
-.video-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 vídeos por linha */
-    grid-gap: 10px;
-    z-index: 10;
-    margin-top: 150px; /* Coloca os vídeos abaixo do header e do main */
-
-}
 
 .video-item {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: 20px 20px ;
+
 }
 
 .video-item video {
-    width: 100%;
-    height: 200px;
+    width: 98%;
+    height: 190px;
     object-fit: cover;
     transition: transform 0.3s ease;
+    clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+
 }
 
 
+
+.video-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 vídeos por linha */
+    grid-gap: 10px;
+    z-index: 10;
+    margin-top: 150px; /* Coloca os vídeos abaixo do header e do main */
+    padding-bottom: 20px;
+    background-color: blue;
+    padding-top: 20px;
+   background-image: url(./Imagem\ do\ WhatsApp\ de\ 2025-01-12\ à\(s\)\ 05.33.03_f09be11b.jpg);
+    background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
+    background-position: center;
+}
+
+#button-container {
+    grid-column: span 2; /* Centraliza o botão em toda a largura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Espaçamento entre os vídeos e o botão */
+}
+
+.botao-comprar {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(35deg, red, black);
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 60px;
+    width: 200px;
+}
+
+.botao-comprar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botao-comprar:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.video-item video:hover{
+
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-item video:active{
+
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+---------------------------------------
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+
+
+header {
+    background-color: black;
+    text-align: center;
+}
+
+header > h1 {
+   
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+
+
+
+
+section {
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: black;
+    color: white;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url(./Imagem\ do\ WhatsApp\ de\ 2025-01-12\ à\(s\)\ 05.30.18_0ed77d92.jpg);
+   background-position: center ;
+
+
+}
+
+section#img02 {
+    background-image: url('./Imagem\ do\ WhatsApp\ de\ 2025-01-12\ à\(s\)\ 04.36.18_e90ddf6c.jpg');
+    background-position: center;
+
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
