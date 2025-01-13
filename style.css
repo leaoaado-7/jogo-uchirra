@@ -157,3 +157,23 @@ main {
     #boton{
         margin-right: 90px;
     }
+
+
+    --------------------tabelas---------
+
+
+
+table{
+    border-collapse: collapse;
+
+}
+
+th, td {
+    border: 1px solid white;
+}
+
+caption {
+    font-size: 1.3em;
+    font-weight: bolder;
+    padding: 10px;
+}
