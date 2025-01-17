@@ -48,7 +48,6 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; /* Garante que os itens da lista fiquem na mesma linha */
 }
 
 nav ul li a {
