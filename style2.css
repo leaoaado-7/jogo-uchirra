@@ -15,7 +15,7 @@ body{
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
     padding: 0 20px;
     position: fixed;
     top: 0;
@@ -57,7 +57,6 @@ nav ul li a:hover {
 }
 
 #video-container {
-    position: absolute;
     top: 150px; /* Altura do header */
     left: px;
     width: 100%;
@@ -69,7 +68,6 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
@@ -77,9 +75,8 @@ nav ul li a:hover {
 
 
 #video-title {
-    position: absolute;
     top: 20px;
-    left: 20px;
+    left: 10px;
     font-size: 36px;
     color: white;
     z-index: 2;
@@ -128,6 +125,7 @@ main {
    background-image: url(./Imagem\ do\ WhatsApp\ de\ 2025-01-12\ à\(s\)\ 05.33.03_f09be11b.jpg);
     background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
     background-position: center;
+    
 }
 
 #button-container {
@@ -340,3 +338,56 @@ thead {
         font-size: 1.2em;
     }
 }
+
+
+
+
+
+
+.video-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Para telas grandes, cria 2 colunas */
+    gap: 10px; /* Espaçamento entre os vídeos */
+    z-index: 10;
+    margin-top: 150px;
+    padding-bottom: 20px;
+    background-color: blue;
+    padding-top: 20px;
+    background-image: url(./Imagem\ do\ WhatsApp\ de\ 2025-01-12\ à\(s\)\ 05.33.03_f09be11b.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.video-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    flex-direction: column;
+
+    overflow: hidden; /* Para garantir que o vídeo não ultrapasse o contêiner */
+}
+
+.video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .video-section {
+        grid-template-columns: repeat(2, 1fr); /* Para telas médias, 2 colunas */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        grid-template-columns: 2fr; /* Para telas pequenas, 1 coluna */
+    }
+}
+
+
+

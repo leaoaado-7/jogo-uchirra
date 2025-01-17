@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
 </head>
 <body>
     <header id="home">
@@ -198,15 +199,150 @@ Madara Uchiha, o Deus da Guerra, <br> reinando supremo com o Rinnegan. Seu poder
                 </tr>
             </tbody>
             <tfoot>
-                <td colspan="5">Jogos de NarutoAAAAA</td>
+                <td colspan="5">Jogos de Naruto</td>
             </tfoot>
         </table>
     </div>
       </section>
-    
 
- 
+          <style>
+            
+      
+              /* Nova seção no final do site */
+              #new-section {
+                position: relative;
+            min-height: 100vh;
+            background-image: url('./Imagem\ do\ WhatsApp\ de\ 2025-01-12\ à\(s\)\ 05.14.32_0f2022a0.jpg'); /* Imagem de fundo padrão */
+            background-size: cover;
+            background-position: center;
+            padding: 50px 20px;
+            transition: background-image 0.5s ease-in-out;
+            overflow: hidden;
+              }
+      
+              /* Botões */
+              .buttons {
+                  position: absolute;
+                  right: 5%;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+                  z-index: 10;
+              }
+      
+              .button {
+                  width: 80px;
+                  height: 80px;
+                  border-radius: 50%;
+                  background-size: cover;
+                  background-position: center;
+                  border: 2px solid white;
+                  cursor: pointer;
+                  transition: transform 0.3s ease-in-out;
+              }
+      
+              .button:hover {
+                  transform: scale(1.1);
+              }
+      
+              /* Responsividade */
+              @media (max-width: 768px) {
+                  .buttons {
+                      right: 3%;
+                  }
+                  .button {
+                      width: 70px;
+                      height: 70px;
+                  }
+              }
+      
+              @media (max-width: 480px) {
+                  .buttons {
+                      right: 1%;
+                  }
+                  .button {
+                      width: 60px;
+                      height: 60px;
+                  }
+              }
+      
+              /* Estilo do conteúdo (texto, botões) acima do vídeo */
+              .content {
+                  position: relative;
+                  z-index: 2;
+              }
+          </style>
+      </head>
+      <body>
+          <!-- Seção existente -->
+          <div id="sasuke">
+              <!-- Seu conteúdo existente aqui -->
+          </div>
+      
+          <!-- Nova seção com botões -->
+          <div id="new-section">
+              <div class="buttons">
+                  <!-- Botões com imagens de fundo -->
 
+                  <div class="button" id="btn1" style="background-image: url('Imagem do WhatsApp de 2025-01-14 à(s) 03.57.12_dfd32246.jpg');"></div>
+                  <div class="button" id="btn2" style="background-image: url('Imagem do WhatsApp de 2025-01-14 à(s) 03.57.12_8b265bb4.jpg');"></div>
+                  <div class="button" id="btn3" style="background-image: url('Imagem do WhatsApp de 2025-01-14 à(s) 03.57.12_1e388f41.jpg');"></div>
+              </div>
+      
+              <!-- Conteúdo que ficará sobre o vídeo -->
+              <div class="content">
+                  <h1>evolução sharingan</h1>
+                  <p>sasuke uchirra.</p>
+              </div>
+          </div>
+      
+          <script>
+              // Função para adicionar o vídeo ao fundo da seção
+              function changeBackgroundVideo(videoUrl) {
+                  // Seleciona a seção e remove qualquer vídeo existente
+                  const section = document.getElementById('new-section');
+                  const existingVideo = section.querySelector('video');
+                  if (existingVideo) {
+                      existingVideo.remove(); // Remove o vídeo atual
+                  }
+      
+                  // Cria um novo elemento de vídeo
+                  const videoElement = document.createElement('video');
+                  videoElement.src = videoUrl;
+                  videoElement.autoplay = true;
+                  videoElement.loop = true;
+                  videoElement.muted = true;
+                  videoElement.style.position = 'absolute';
+                  videoElement.style.top = '0';
+                  videoElement.style.left = '0';
+                  videoElement.style.width = '100%';
+                  videoElement.style.height = '100%';
+                  videoElement.style.objectFit = 'cover';
+                  videoElement.style.zIndex = '1';
+      
+                  // Adiciona o vídeo à seção
+                  section.appendChild(videoElement);
+              }
+      
+              // Adicionando os eventos para os botões
+              document.getElementById('btn1').addEventListener('click', function() {
+                  changeBackgroundVideo('Vídeo do WhatsApp de 2025-01-14 à(s) 03.23.04_5bbd8b9c.mp4');  // Coloque o caminho do seu vídeo
+              });
+      
+              document.getElementById('btn2').addEventListener('click', function() {
+                  changeBackgroundVideo('Vídeo do WhatsApp de 2025-01-14 à(s) 03.25.13_7f282657.mp4');  // Coloque o caminho do seu vídeo
+              });
+      
+              document.getElementById('btn3').addEventListener('click', function() {
+                  changeBackgroundVideo('Vídeo do WhatsApp de 2025-01-14 à(s) 03.32.23_8353a520.mp4');  // Coloque o caminho do seu vídeo
+              });
+          </script>
+   
+      
 </body>
 </html>
-    
+
+
+
